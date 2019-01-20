@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Block User</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>ID</ion-label>
+      <ion-input [(ngModel)]="id" type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button (click)="blockUser()" ion-button>Send</button>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+      <ion-input [(ngModel)]="surname"  type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password"  type="password" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Admin Role</ion-label>
+      <ion-checkbox [(ngModel)]="role"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button (click)="register()" ion-button>Accept</button>
+    <button (click)="backPage()" ion-button>Cancel</button>
+  </div>
+</ion-content>

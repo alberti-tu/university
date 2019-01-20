@@ -1,0 +1,61 @@
+<div *ngIf="showLogin">
+  <p>LOGIN</p>
+  <form (submit)="login(username, password)">
+    <input #username type="text" placeholder="Nombre de Usuario">
+    <input #password type="text" placeholder="Contraseña">
+    <button>Enviar</button>
+  </form>
+</div>
+<div *ngIf="showLogin">
+  <p>Crear un nuevo usuario</p>
+  <form (submit)="newUser(username, surname, password, role)">
+    <input #username type="text" placeholder="Nombre de usuario">
+    <input #surname type="text" placeholder="Apellido del usuario">
+    <input #password type="text" placeholder="Contraseña">
+    <input #role type="text" placeholder="Role (true or false)">
+    <button>Enviar</button>
+  </form>
+</div>
+
+<div *ngIf="showHome">
+  <p>HOME</p>
+
+  <select #select [(ngModel)]="current" (change)="selectFilter(select.value)">
+    <option *ngFor="let item of list" [value]="item.id">{{item.name}}</option>
+  </select>
+  <form (submit)="busqueda(search)">
+    <input #search type="text" placeholder={{msg}}>
+    <button>Enviar</button>
+  </form>
+
+  <div *ngIf="showData">
+    <ul>
+      <li *ngFor="let user of respuesta">
+        <p>Nombre: {{user.name}}</p>
+        <p>Apellido: {{user.surname}}</p>
+        <p>Role: {{user.role}}</p>
+        <p>State: {{user.state}}</p>
+        <p>Id: {{user._id}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <p>Actualizar Nombre, Apellido y Role a partir del ID</p>
+    <form (submit)="update(username, surname, role, id_update)">
+      <input #username type="text" placeholder="Nombre de usuario">
+      <input #surname type="text" placeholder="Apellido del usuario">
+      <input #role type="text" placeholder="Role (true or false)">
+      <input #id_update type="text" placeholder="Id del usuario">
+      <button>Enviar</button>
+    </form>
+  </div>
+
+  <div>
+    <p>Bloquar a un usuario</p>
+    <form (submit)="block(id_block)">
+      <input #id_block type="text" placeholder="Id del usuario">
+      <button>Enviar</button>
+    </form>
+  </div>
+</div>

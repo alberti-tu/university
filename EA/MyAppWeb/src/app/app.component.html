@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<app-nav></app-nav>
+<body>
+<div class="header">
+  <h1>{{title}}</h1>
+</div>
+
+<div class="body">
+  <a href={{web_site}} target="_blank">{{web_name}}</a>
+  <h4>Otras Webs de interés</h4>
+  <button (click)="showWebs()">
+    {{showWeb ? 'Ocultar' : 'Mostrar'}}
+  </button>
+</div>
+
+<div *ngIf="showWeb" class="component">
+  <form (submit)="newWeb(nuevaWeb)">
+    <input
+      #nuevaWeb
+      type="text"
+      name="newWeb"
+      placeholder="Añadir Web">
+  </form>
+  <ul>
+    <li *ngFor="let web of webs">{{web}}</li>
+  </ul>
+</div>
+
+<div class="body">
+  <button (click)="connect()">Conectar</button>
+</div>
+
+<div class="body">
+  <agm-map
+    [latitude]="latitud_map"
+    [longitude]="longitud_map"
+    [zoom]="17" *ngIf="showMap"
+    (mapClick)="mapClick($event)">
+    <agm-marker
+      [latitude]="latitud_marker"
+      [longitude]="longitud_marker">
+      <agm-info-window>
+        Latitud: {{latitud_marker}}º<p>Longitud: {{longitud_marker}}º
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>
+</body>
+</html>

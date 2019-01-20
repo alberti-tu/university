@@ -1,0 +1,7 @@
+tabla producto
+
+(String) nombre | (int) cantidad | (int) precio
+
+tabla pedido
+
+(String) usuario | (String) nombre_producto | (int) cantidad

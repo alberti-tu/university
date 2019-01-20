@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie App</string>
+
+    <string name="name">TMDB</string>
+    <string name="box">Buscar</string>
+    <string name="button">Aceptar</string>
+    <string name="top">TOP 20</string>
+</resources>

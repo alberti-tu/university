@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Filter by</ion-label>
+      <ion-select [(ngModel)]="filter">
+        <ion-option>Name</ion-option>
+        <ion-option>Surname</ion-option>
+        <ion-option>Role</ion-option>
+        <ion-option>State</ion-option>
+        <ion-option>Alphabetical</ion-option>
+        <ion-option>Id</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Search</ion-label>
+      <ion-input [(ngModel)]="search" type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button (click)="select()" ion-button>Send</button>
+  </div>
+
+  <div *ngIf="showData">
+    <ul *ngFor="let user of response">
+      <ion-card>
+        <ion-item>
+          <h2>{{user.name}} {{user.surname}}</h2>
+          <p>Id: {{user._id}}</p>
+        </ion-item>
+        <ion-card-content>
+          <p>Role: {{user.role}}</p>
+          <p>State: {{user.state}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ul>
+  </div>
+</ion-content>

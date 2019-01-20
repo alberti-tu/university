@@ -1,0 +1,23 @@
+.header {
+  background-color: crimson;
+  color: black;
+}
+
+.body {
+  background-color: white;
+  color: black;
+}
+
+.component {
+  background-color: bisque;
+  color: black;
+}
+
+body {
+  padding-top: 1.3rem;
+}
+
+agm-map {
+  width: 600px;
+  height: 400px;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "EA_Minim2_ionic",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

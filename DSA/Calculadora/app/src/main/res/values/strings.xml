@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+
+    <string name="info">Introduïu 2 valors enters i una operació.\nPrémer " = " per obtenir el resultat.\nPrémer "C " per esborrar.</string>
+    <string name="num1">Número 1</string>
+    <string name="num2">Número 2</string>
+    <string name="result">=</string>
+    <string name="clear">CC</string>
+    <string name="resultado">Resultat</string>
+    <string name="historial">Historial</string>
+
+    <string name="titulo">HISTORIAL D´OPERACIONS</string>
+    <string name="borrar">Esborrar</string>
+
+    <string name="pregunta">Voleu esborrar tot l’historial?</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+
+    <string name="modificar">Modificar</string>
+
+    <string-array name="operacion">
+        <item>SUMA (+)</item>
+        <item>RESTA (-)</item>
+        <item>MULTIPLICACIÓ (x)</item>
+        <item>DIVISIÓ (/)</item>
+    </string-array>
+
+</resources>

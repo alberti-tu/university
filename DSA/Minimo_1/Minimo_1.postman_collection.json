@@ -1,0 +1,40 @@
+{
+	"info": {
+		"name": "Minimo_1",
+		"_postman_id": "49e5b975-6e2f-2d14-190e-3fda8b86f437",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/myapp/json/pedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"usuario\":\"Albert\",\n\t\"pedido\": \n\t[\n\t\t{ \"cantidad\": 1, \"nombre\": \"Zumo\", \"precio\": 6 }, \n\t\t{ \"cantidad\": 5, \"nombre\": \"Agua\", \"precio\": 2 }\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/myapp/json/pedido",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myapp",
+						"json",
+						"pedido"
+					]
+				},
+				"description": "POST para agregar un pedido a la cola de servicio"
+			},
+			"response": []
+		}
+	]
+}
